@@ -51,6 +51,7 @@ bin/
 
 # VS Code
 .vscode/
+.vs/
 
 # === MAUI specific ===
 platforms/
