@@ -3,7 +3,7 @@ package app.veefit.veefitdesktop;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class mainController {
     @FXML
     private Label welcomeText;
 
