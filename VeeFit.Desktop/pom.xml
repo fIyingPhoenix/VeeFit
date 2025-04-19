@@ -81,11 +81,11 @@
                     <execution>
                         <id>default-cli</id>
                         <configuration>
-<<<<<<< Updated upstream
+
                             <mainClass>app.veefit.veefitdesktop/app.veefit.veefitdesktop.main</mainClass>
-=======
+
                             <mainClass>app.veefit.veefitdesktop.app.veefit.veefitdesktop.HelloApplication</mainClass>
->>>>>>> Stashed changes
+
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
