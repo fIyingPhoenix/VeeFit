@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35728.132 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeeFit.Mobile", "VeeFit.Mobile.csproj", "{9855C823-1D48-4B1A-A568-4B22D6CF23CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeeFit.Web", "..\VeeFit.Web\VeeFit.Web.csproj", "{263262D5-8592-4B87-9459-3FAB9F1B6551}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeeFit.Admin", "..\VeeFit.Admin\VeeFit.Admin.csproj", "{633DAEBB-BA95-4973-A9B8-46F9F88DCC7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeeFit.Core", "..\VeeFit.Core\VeeFit.Core.csproj", "{AE45241A-7D2B-4787-80C0-9832F5F10C51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9855C823-1D48-4B1A-A568-4B22D6CF23CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9855C823-1D48-4B1A-A568-4B22D6CF23CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9855C823-1D48-4B1A-A568-4B22D6CF23CF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9855C823-1D48-4B1A-A568-4B22D6CF23CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9855C823-1D48-4B1A-A568-4B22D6CF23CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263262D5-8592-4B87-9459-3FAB9F1B6551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263262D5-8592-4B87-9459-3FAB9F1B6551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263262D5-8592-4B87-9459-3FAB9F1B6551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263262D5-8592-4B87-9459-3FAB9F1B6551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{633DAEBB-BA95-4973-A9B8-46F9F88DCC7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{633DAEBB-BA95-4973-A9B8-46F9F88DCC7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{633DAEBB-BA95-4973-A9B8-46F9F88DCC7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{633DAEBB-BA95-4973-A9B8-46F9F88DCC7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE45241A-7D2B-4787-80C0-9832F5F10C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE45241A-7D2B-4787-80C0-9832F5F10C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE45241A-7D2B-4787-80C0-9832F5F10C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE45241A-7D2B-4787-80C0-9832F5F10C51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
