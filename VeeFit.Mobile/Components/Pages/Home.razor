@@ -1,7 +1,34 @@
 ﻿@page "/"
 
 <PageTitle>Home</PageTitle>
+<MudStack>
+    <MudCard Class="pa-2" Elevation="2">
+        <MudCardContent>
+            <MudSkeleton SkeletonType="SkeletonType.Text" Width="60%" />
+            <MudSkeleton SkeletonType="SkeletonType.Text" Width="40%" Height="42px;" />
+            <MudSkeleton Width="100%" />
+        </MudCardContent>
+    </MudCard>
 
-<MudText Typo="Typo.h3" GutterBottom="true">Hello, world!</MudText>
-<MudText Class="mb-8">Welcome to VeeFit!</MudText>
-
+    <MudCard Class="pa-2" Elevation="2">
+         <MudCardHeader>
+            <CardHeaderAvatar>
+                <MudSkeleton SkeletonType="SkeletonType.Circle" Animation="Animation.Wave" Height="40px" Width="40px"/>
+            </CardHeaderAvatar>
+            <CardHeaderContent>
+                <MudSkeleton Animation="Animation.Wave" Width="40%" />
+                <MudSkeleton Animation="Animation.Wave" Width="60%" />
+            </CardHeaderContent>
+        </MudCardHeader>
+        <MudSkeleton SkeletonType="SkeletonType.Rectangle" Height="200px"  />
+        <MudCardContent>
+            <MudSkeleton Width="30%" Height="42px;" />
+            <MudSkeleton Width="80%" />
+            <MudSkeleton Width="100%" />
+        </MudCardContent>
+        <MudCardActions>
+            <MudSkeleton Width="64px" Height="40px" Class="ml-2" />
+            <MudSkeleton Width="105px" Height="40px" Class="ml-3" />
+        </MudCardActions>
+    </MudCard>
+</MudStack>

@@ -25,4 +25,5 @@
     justify-content: space-around;
     align-items: center;
     z-index: 1000;
+    background-color: var(--mud-palette-surface);
 }
