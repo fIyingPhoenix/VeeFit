@@ -16,6 +16,9 @@ namespace VeeFit.Web
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
 
+            // Add Custom Classes 
+            builder.Services.AddSingleton<Core.Extensions.GUI.Themes>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

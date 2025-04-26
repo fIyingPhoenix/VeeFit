@@ -38,8 +38,8 @@
 
         _theme = new()
         {
-            PaletteLight = _lightPalette,
-            PaletteDark = _darkPalette,
+            PaletteLight = Core.Extensions.GUI.Themes.LightTheme(),
+            PaletteDark = Core.Extensions.GUI.Themes.DarkTheme(),
             LayoutProperties = new LayoutProperties()
         };
     }

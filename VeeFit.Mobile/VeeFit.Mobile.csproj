@@ -68,4 +68,8 @@
         <PackageReference Include="MudBlazor" Version="8.5.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\VeeFit.Core\VeeFit.Core.csproj" />
+    </ItemGroup>
+
 </Project>
