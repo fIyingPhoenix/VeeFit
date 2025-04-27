@@ -27,3 +27,13 @@
     z-index: 1000;
     background-color: var(--mud-palette-surface);
 }
+.VeeFitLogoImage {
+    height: 40px;
+    width: auto;
+}
+
+.VeeFitLogoImage path {
+    fill: var(--mud-palette-primary);
+    stroke:none; 
+    fill-rule:evenodd;
+}
