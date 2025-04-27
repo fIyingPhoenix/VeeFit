@@ -20,7 +20,7 @@
     </MudMainContent>
     <!-- Bottom Menu-->
     <MudPaper Class="mud-width-full" Elevation="2" id="BottomNavigationPanel">
-       
+
         <!--Home Button-->
         <MudIconButton Icon="@Icons.Material.Filled.Home" ></MudIconButton>
         <!--ADD Post Button-->
@@ -29,56 +29,48 @@
         </MudButton>
 
         <!--User Settings -->
-        <MudMenu Icon="@Icons.Material.Filled.Person" Label="Settings" >
-            <!-- Dark/Light Theme Toggle -->
-            <MudMenuItem OnClick="@DarkModeToggle" Style="justify-content: flex-start;">
-                <span style="display: inline-flex; align-items: center-left; gap: 8px;">
-                    <MudIcon Icon="@DarkLightModeButtonIcon" Color="Color.Primary" />
-                    <MudText>@GetThemeText()</MudText>
+        <MudIconButton Icon="@Icons.Material.Filled.Person" OnClick="SettingsPanleToggle" />
+
+
+    </MudPaper>
+    <!--Settings Panel -->
+    <MudDrawer @bind-Open="@OpenSettingsPanel" Width="250px" Height="100%" Anchor="Anchor.End" Elevation="2" Variant="@DrawerVariant.Temporary">
+        <MudDrawerHeader Class="flex-column align-center">
+            <MudSkeleton SkeletonType="SkeletonType.Circle" Animation="Animation.Wave" Height="100px" Width="100px" />
+            <MudText Typo="Typo.h6" Class="mt-2" >Max Mustermann</MudText>
+        </MudDrawerHeader>
+        <MudText Typo="Typo.h6" Style="margin-left: 5px;">User Settings</MudText>
+        <!-- Dark/Light Theme Toggle -->
+        <MudSwitch Color="Color.Primary" @bind-Value=@(_isDarkMode) Label="Dark Mode"/>
+        <!-- Theme Color Change-->
+        <MudNavGroup Icon="@Icons.Material.Filled.Palette" Title="Color Change" IconColor="Color.Primary" Expanded="false">
+
+            <MudMenuItem OnClick="() => SwitchThemes(0)" Style="justify-content: flex-start;">
+                <span style="display: inline-flex; gap: 8px;">
+                    <MudIcon Icon="@Icons.Material.Filled.Square" Style="color: #2196f3;" />
+                    <MudText Class="ml-2">VeeFit Blue</MudText>
                 </span>
             </MudMenuItem>
-
-            <!-- Color Change Submenu -->
-            <MudMenuItem Style="justify-content: flex-start; padding: 0;">
-                <MudMenu OffsetY="true">
-                    <ActivatorContent>
-                        <MudButton Color="Color.Inherit" Style="justify-content: flex-start; width: 100%;">
-                            <span style="display: inline-flex; align-items: center-left; gap: 8px;">
-                                <MudIcon Icon="@Icons.Material.Filled.Palette" Color="Color.Primary" />
-                                <MudText Class="ml-2">Color Change</MudText>
-                            </span>
-                        </MudButton>
-                    </ActivatorContent>
-                    <ChildContent>
-                        <MudMenuItem OnClick="() => SwitchThemes(0)" Style="justify-content: flex-start;">
-                            <span style="display: inline-flex; align-items: center-left; gap: 8px;">
-                                <MudIcon Icon="@Icons.Material.Filled.Square" Style="color: #2196f3;" />
-                                <MudText Class="ml-2">VeeFit Blue</MudText>
-                            </span>
-                        </MudMenuItem>
-                        <MudMenuItem OnClick="() => SwitchThemes(1)" Style="justify-content: flex-start;">
-                            <span style="display: inline-flex; align-items: center-left; gap: 8px;">
-                                <MudIcon Icon="@Icons.Material.Filled.Square" Style="color: #9c27b0;" />
-                                <MudText Class="ml-2">Purple Fusion</MudText>
-                            </span>
-                        </MudMenuItem>
-                        <MudMenuItem OnClick="() => SwitchThemes(2)" Style="justify-content: flex-start;">
-                            <span style="display: inline-flex; align-items: center-left; gap: 8px;">
-                                <MudIcon Icon="@Icons.Material.Filled.Square" Style="color: coral;" />
-                                <MudText Class="ml-2">Coral Energy</MudText>
-                            </span>
-                        </MudMenuItem>
-                        <MudMenuItem OnClick="() => SwitchThemes(3)" Style="justify-content: flex-start;">
-                            <span style="display: inline-flex; align-items: center-left; gap: 8px;">
-                                <MudIcon Icon="@Icons.Material.Filled.Square" Style="color: limegreen;" />
-                                <MudText Class="ml-2">Green Vitality</MudText>
-                            </span>
-                        </MudMenuItem>
-                    </ChildContent>
-                </MudMenu>
+            <MudMenuItem OnClick="() => SwitchThemes(1)" Style="justify-content: flex-start;">
+                <span style="display: inline-flex; gap: 8px;">
+                    <MudIcon Icon="@Icons.Material.Filled.Square" Style="color: #9c27b0;" />
+                    <MudText Class="ml-2">Purple Fusion</MudText>
+                </span>
             </MudMenuItem>
-        </MudMenu>
-    </MudPaper>
+            <MudMenuItem OnClick="() => SwitchThemes(2)" Style="justify-content: flex-start;">
+                <span style="display: inline-flex; gap: 8px;">
+                    <MudIcon Icon="@Icons.Material.Filled.Square" Style="color: coral;" />
+                    <MudText Class="ml-2">Coral Energy</MudText>
+                </span>
+            </MudMenuItem>
+            <MudMenuItem OnClick="() => SwitchThemes(3)" Style="justify-content: flex-start;">
+                <span style="display: inline-flex; gap: 8px;">
+                    <MudIcon Icon="@Icons.Material.Filled.Square" Style="color: limegreen;" />
+                    <MudText Class="ml-2">Green Vitality</MudText>
+                </span>
+            </MudMenuItem>
+        </MudNavGroup>
+    </MudDrawer>
 </MudLayout>
 
 
@@ -89,7 +81,7 @@
 </div>
 
 @code {
-    private bool _drawerOpen = true;
+    private bool OpenSettingsPanel { get; set; } = false;
     private bool _isDarkMode = false;
     private MudTheme? _theme = null;
 
@@ -108,11 +100,6 @@
                 LayoutProperties = new LayoutProperties()
             };
     }
-
-    private void DrawerToggle()
-    {
-        _drawerOpen = !_drawerOpen;
-    }
     private string GetThemeText()
     {
         return !_isDarkMode ? "Dark Mode" : "Light Mode";
@@ -121,7 +108,10 @@
     {
         _isDarkMode = !_isDarkMode;
     }
-
+    private void SettingsPanleToggle()
+    {
+        OpenSettingsPanel = !OpenSettingsPanel;
+    }
     public string DarkLightModeButtonIcon => _isDarkMode switch
     {
         true => Icons.Material.Rounded.LightMode,
