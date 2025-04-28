@@ -35,7 +35,7 @@ public class LoginController {
     public Button login_button;
     public TextField passwort_textfield;
 
-
+    @FXML
     private void handleLogin(ActionEvent event) throws IOException {
 
         String benutzername = benutzername_textfield.getText();
