@@ -1,10 +1,15 @@
 module app.veefit.veefitdesktop {
     requires javafx.controls;
     requires javafx.fxml;
-
-    requires com.dlsc.formsfx;
-    requires org.kordamp.bootstrapfx.core;
+    requires de.jensd.fx.glyphs.fontawesome;
+    requires java.sql;
+    requires org.xerial.sqlitejdbc;
 
     opens app.veefit.veefitdesktop to javafx.fxml;
     exports app.veefit.veefitdesktop;
+    exports app.veefit.veefitdesktop.Controllers;
+    exports app.veefit.veefitdesktop.Controllers.Admin;
+    exports app.veefit.veefitdesktop.Controllers.Client;
+    exports app.veefit.veefitdesktop.Models;
+    exports app.veefit.veefitdesktop.Views;
 }

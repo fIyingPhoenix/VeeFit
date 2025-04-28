@@ -1,0 +1,19 @@
+.kalorienChart .chart-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.kalorienChart .chart-legend {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #333;
+}
+
+/* Gegessener Bereich in rot */
+.chart-pie.data0.chart-series-pie {
+    -fx-pie-color: #FF6B6B;
+}
+
+/* Übriger Bereich in grün */
+.chart-pie.data1.chart-series-pie {
+    -fx-pie-color: #51CF66;
+}

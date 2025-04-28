@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane fx:id="loginPane" prefHeight="449.0" prefWidth="1000.0" styleClass="login_container_main" stylesheets="@../Styles/Login.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.veefit.veefitdesktop.Controllers.LoginController">
+   <VBox layoutY="14.0" prefHeight="40.0" prefWidth="1029.0" styleClass="login_container_menu" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0">
+         <ImageView fx:id="veefit_image" fitHeight="65.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Images/Logo.JPG" />
+         </ImageView>
+         <Region fx:id="space" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+         <Button fx:id="start_button" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" styleClass="login_menu_bar_buttons" text="START">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+         <Button fx:id="tagebuch_button" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" styleClass="login_menu_bar_buttons" text="TAGEBUCH">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+         <Button fx:id="aktivitaet_button" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" styleClass="login_menu_bar_buttons" text="AKTIVITÄT">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+         <Region fx:id="space2" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+         <Button fx:id="suche_button" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" styleClass="login_menu_bar_buttons">
+            <font>
+               <Font size="20.0" />
+            </font>
+            <graphic>
+               <FontIcon iconLiteral="fas-search" />
+            </graphic>
+         </Button>
+         <Button fx:id="einstellungen_button" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" styleClass="login_menu_bar_buttons">
+            <font>
+               <Font size="20.0" />
+            </font>
+            <graphic>
+               <FontIcon iconLiteral="fas-cog" />
+            </graphic>
+         </Button>
+         <Button fx:id="profil_button" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" styleClass="login_menu_bar_buttons">
+            <font>
+               <Font size="20.0" />
+            </font>
+            <graphic>
+               <FontIcon iconLiteral="fas-home" />
+            </graphic>
+         </Button>
+      </HBox>
+   </VBox>
+   <VBox layoutX="50.0" layoutY="75.0" prefHeight="300.0" prefWidth="900.0" styleClass="login_container_form">
+      <children>
+         <Label id="login_bereich_textfield" fx:id="loginbereich_label" text="LOGIN - BEREICH">
+            <font>
+               <Font name="System Italic" size="12.0" />
+            </font>
+         </Label>
+         <Label fx:id="benutzername_label" text="BENUTZERNAME">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Label>
+         <TextField fx:id="benutzername_textfield" styleClass="login_input_field" />
+         <Label fx:id="password_label" text="PASSWORT">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Label>
+         <TextField fx:id="passwort_textfield" styleClass="login_input_field" />
+         <Button fx:id="login_button" mnemonicParsing="false" onAction="#handleLogin" prefWidth="1000.0" styleClass="login_button" text="LOGIN" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+         <Button fx:id="hilfe_button" mnemonicParsing="false" styleClass="login_hilfebutton" text="Passwort vergessen ?">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+      </children>
+   </VBox>
+</AnchorPane>

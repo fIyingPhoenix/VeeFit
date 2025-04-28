@@ -1,0 +1,87 @@
+/* Main_Container */
+.dashboard_container_main {
+    -fx-background-color: #EEEEEE;
+    -fx-alignment: CENTER;
+}
+/* Linke Seitenleiste */
+
+.left_container {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(two-pass-box, #AAAAAA, 5, 0, 0, 4);
+}
+
+.title_container {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10 10 10 10;
+    -fx-alignment: TOP_CENTER;
+    -fx-padding: 10;
+    -fx-fill: #000000;
+}
+
+.title_container Text {
+    -fx-fill: #000000;
+    -fx-font-size:2em;
+}
+
+/* Navigation */
+
+.menu_container {
+    -fx-padding: 10 10 10 10;
+    -fx-spacing: 20;
+    -fx-alignment: CENTER;
+}
+
+.menu_container Button {
+    -fx-pref-width: 115;
+    -fx-pref-height: 40;
+    -fx-text-fill: #132A13;
+    -fx-background-color: #FFFFFF;
+    -fx-font-size: 1.1em;
+    -fx-alignment: CENTER_LEFT;
+    -fx-effect: dropshadow(three-pass-box, #DDDDDD, 5, 0, 0, 6);
+}
+
+.menu_container Button:hover {
+    -fx-cursor: hand;
+}
+
+.alt_menu_button {
+    -fx-pref-width: 115;
+    -fx-pref-height: 40;
+    -fx-background-radius: 10 10 10 10;
+    -fx-background-color: #132A13;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 1.1em;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Problem Region */
+
+.report_container {
+    -fx-background-color: #EEFFEE;
+    -fx-background-radius: 10;
+    -fx-alignment: CENTER;
+    -fx-spacing: 10;
+    -fx-padding: 10 10 10 10;
+}
+
+.report_container Text {
+    -fx-font-weight: bold;
+    -fx-fill: #132A13;
+}
+
+.report_container Label {
+    -fx-text-alignment: CENTER;
+    -fx-wrap-text: true;
+}
+
+.report_container Button {
+    -fx-pref-width: 80;
+    -fx-background-color: #132A13;
+    -fx-text-fill: #FFFFFF;
+}
+
+.report_container Button:hover {
+    -fx-cursor: hand;
+}
