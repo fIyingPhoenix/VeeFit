@@ -6,6 +6,10 @@ module app.veefit.veefitdesktop {
     requires org.xerial.sqlitejdbc;
 
     opens app.veefit.veefitdesktop to javafx.fxml;
+    opens app.veefit.veefitdesktop.Controllers to javafx.fxml;
+    opens app.veefit.veefitdesktop.Controllers.Admin to javafx.fxml;
+    opens app.veefit.veefitdesktop.Controllers.Client to javafx.fxml;
+
     exports app.veefit.veefitdesktop;
     exports app.veefit.veefitdesktop.Controllers;
     exports app.veefit.veefitdesktop.Controllers.Admin;
