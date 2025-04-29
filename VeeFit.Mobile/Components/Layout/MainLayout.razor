@@ -13,7 +13,7 @@
             <MudText Typo="Typo.h5" Class="ml-3"><b>VeeFit</b></MudText>
         </span>
         <MudSpacer />
-        <MudIconButton Icon="@Icons.Material.Filled.Search" Size="Size.Large" />
+        <MudIconButton Icon="@Icons.Material.Filled.Search" Size="Size.Medium" />
     </MudAppBar>
     <MudMainContent Class="mt-16 pa-4">
         @Body
@@ -39,37 +39,58 @@
             <MudSkeleton SkeletonType="SkeletonType.Circle" Animation="Animation.Wave" Height="100px" Width="100px" />
             <MudText Typo="Typo.h6" Class="mt-2" >Max Mustermann</MudText>
         </MudDrawerHeader>
-        <MudText Typo="Typo.h6" Style="margin-left: 5px;">User Settings</MudText>
+        <MudText Typo="Typo.h6" Style="margin-left: 12px; margin-bottom: 10px;">User Settings</MudText>
+        <!--User Profill Button-->
+        <MudMenuItem Icon="@Icons.Material.Filled.AccountCircle" Style="margin-left: 2px;" IconColor="Color.Primary">User Profile</MudMenuItem>
+
         <!-- Dark/Light Theme Toggle -->
-        <MudSwitch Color="Color.Primary" @bind-Value=@(_isDarkMode) Label="Dark Mode"/>
+        <MudStack Row="true" AlignItems="AlignItems.Center" Style="margin-left: 7px;" Spacing="3">
+            <MudIcon Style="margin-left: 8px;" Icon="@DarkLightModeButtonIcon" Size="Size.Medium" color="Color.Primary"/>
+            <MudText Typo="Typo.body1">@DarkLightModeButtonText</MudText>
+            <MudSpacer />
+            <MudSwitch Color="Color.Primary" @bind-Value=@(_isDarkMode) />
+        </MudStack>
+
         <!-- Theme Color Change-->
         <MudNavGroup Icon="@Icons.Material.Filled.Palette" Title="Color Change" IconColor="Color.Primary" Expanded="false">
 
             <MudMenuItem OnClick="() => SwitchThemes(0)" Style="justify-content: flex-start;">
-                <span style="display: inline-flex; gap: 8px;">
+                <MudStack Row="true" AlignItems="AlignItems.Center" Style="margin-left: 5px;" Spacing="3">
                     <MudIcon Icon="@Icons.Material.Filled.Square" Style="color: #2196f3;" />
                     <MudText Class="ml-2">VeeFit Blue</MudText>
-                </span>
+                    <MudSpacer />
+                </MudStack>
             </MudMenuItem>
             <MudMenuItem OnClick="() => SwitchThemes(1)" Style="justify-content: flex-start;">
-                <span style="display: inline-flex; gap: 8px;">
+                <MudStack Row="true" AlignItems="AlignItems.Center" Style="margin-left: 5px;" Spacing="3">
                     <MudIcon Icon="@Icons.Material.Filled.Square" Style="color: #9c27b0;" />
                     <MudText Class="ml-2">Purple Fusion</MudText>
-                </span>
+                    <MudSpacer />
+                </MudStack>
             </MudMenuItem>
             <MudMenuItem OnClick="() => SwitchThemes(2)" Style="justify-content: flex-start;">
-                <span style="display: inline-flex; gap: 8px;">
+                 <MudStack Row="true" AlignItems="AlignItems.Center" Style="margin-left: 5px;" Spacing="3">
                     <MudIcon Icon="@Icons.Material.Filled.Square" Style="color: coral;" />
                     <MudText Class="ml-2">Coral Energy</MudText>
-                </span>
+                    <MudSpacer />
+                </MudStack>
             </MudMenuItem>
             <MudMenuItem OnClick="() => SwitchThemes(3)" Style="justify-content: flex-start;">
-                <span style="display: inline-flex; gap: 8px;">
+                 <MudStack Row="true" AlignItems="AlignItems.Center" Style="margin-left: 5px;" Spacing="3">
                     <MudIcon Icon="@Icons.Material.Filled.Square" Style="color: limegreen;" />
                     <MudText Class="ml-2">Green Vitality</MudText>
-                </span>
+                    <MudSpacer />
+                </MudStack>
             </MudMenuItem>
         </MudNavGroup>
+
+        <!-- Diary Button-->
+        <MudMenuItem Icon="@Icons.Material.Filled.Book" Style="margin-left: 2px;" IconColor="Color.Primary">Diary</MudMenuItem>
+        <!-- Training Plan Button-->
+        <MudMenuItem Icon="@Icons.Material.Filled.FitnessCenter" Style="margin-left: 2px;" IconColor="Color.Primary">Training Plan</MudMenuItem>
+        <!-- Training Plan Button-->
+        <MudMenuItem Icon="@Icons.Material.Filled.ExitToApp" Style="margin-left: 2px;" IconColor="Color.Primary">Sign Out</MudMenuItem>
+
     </MudDrawer>
 </MudLayout>
 
@@ -114,8 +135,13 @@
     }
     public string DarkLightModeButtonIcon => _isDarkMode switch
     {
-        true => Icons.Material.Rounded.LightMode,
-        false => Icons.Material.Outlined.DarkMode,
+        false => Icons.Material.Rounded.LightMode,
+        true => Icons.Material.Outlined.DarkMode,
+    };
+    public string DarkLightModeButtonText => _isDarkMode switch
+    {
+        false => "Light Mode",
+        true => "Dark Mode",
     };
 }
 
