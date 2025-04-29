@@ -10,53 +10,48 @@
 <?import javafx.scene.shape.Line?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0"
-      prefWidth="171.0" styleClass="dashboard_container_main" stylesheets="@../../Styles/ClientMenu.css"
-      xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="app.veefit.veefitdesktop.Controllers.Client.ClientController">
+<VBox fx:id="side_menu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="171.0" styleClass="dashboard_container_main" stylesheets="@../../Styles/ClientMenu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.veefit.veefitdesktop.Controllers.Client.ClientController">
    <AnchorPane prefHeight="600.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
-      <VBox layoutX="25.0" layoutY="-7.0" prefHeight="50.0" prefWidth="100.0" styleClass="title_container"
-            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox layoutX="25.0" layoutY="-7.0" prefHeight="50.0" prefWidth="100.0" styleClass="title_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <ImageView fitHeight="83.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../../Images/Logo.JPG"/>
+            <Image url="@../../Images/Logo.JPG" />
          </ImageView>
       </VBox>
-      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="menu_container" AnchorPane.leftAnchor="0.0"
-            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="menu_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <Button fx:id="startseite_button" mnemonicParsing="false" styleClass="title_container" text="Startseite">
             <graphic>
-               <FontIcon iconLiteral="fas-home"/>
+               <FontIcon iconLiteral="fas-home" />
             </graphic>
          </Button>
          <Button fx:id="tagebuch_button" mnemonicParsing="false" styleClass="title_container" text="Tagebuch">
             <graphic>
-               <FontIcon iconLiteral="fas-book"/>
+               <FontIcon iconLiteral="fas-book" />
             </graphic>
          </Button>
-         <Button fx:id="plaene_button" mnemonicParsing="false" prefHeight="39.0" prefWidth="153.0"
-                 styleClass="title_container" text="Pläne">
+         <Button fx:id="plaene_button" mnemonicParsing="false" prefHeight="39.0" prefWidth="153.0" styleClass="title_container" text="Pläne">
             <graphic>
-               <FontIcon iconLiteral="fas-list" text=""/>
+               <FontIcon iconLiteral="fas-list" text="" />
             </graphic>
          </Button>
-         <Line endX="46.29289245605469" endY="-0.621320366859436" startX="-100.0"/>
+         <Line endX="46.29289245605469" endY="-0.621320366859436" startX="-100.0" />
          <Button fx:id="profil_button" mnemonicParsing="false" styleClass="alt_menu_button" text="Profil">
             <graphic>
-               <FontIcon fill="WHITE" iconLiteral="fas-user"/>
+               <FontIcon fill="WHITE" iconLiteral="fas-user" />
             </graphic>
          </Button>
          <Button fx:id="logout_button" mnemonicParsing="false" styleClass="alt_menu_button" text="Logout">
             <graphic>
-               <FontIcon fill="WHITE" iconLiteral="fas-sign-out-alt"/>
+               <FontIcon fill="WHITE" iconLiteral="fas-sign-out-alt" />
             </graphic>
          </Button>
       </VBox>
    </AnchorPane>
    <VBox prefHeight="187.0" prefWidth="190.0" styleClass="report_container">
-      <TextField alignment="CENTER" text="Problem melden ?"/>
-      <Label text="Benutzen Sie diesen Bereich um ein Pronlem zu melden"/>
+      <TextField alignment="CENTER" text="Problem melden ?" />
+      <Label text="Benutzen Sie diesen Bereich um ein Pronlem zu melden" />
       <Button fx:id="support_button" mnemonicParsing="false" styleClass="title_container" text="Support">
          <graphic>
-            <FontIcon iconColor="WHITE" iconLiteral="fas-comment"/>
+            <FontIcon iconColor="WHITE" iconLiteral="fas-comment" />
          </graphic>
       </Button>
    </VBox>

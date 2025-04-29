@@ -43,7 +43,7 @@ public class LoginController {
 
         if (benutzername.equals("admin") && passwort.equals("1234")) {
 
-            Parent dashboardRoot = FXMLLoader.load(getClass().getResource("/Fxml/Dashboard.fxml"));
+            Parent dashboardRoot = FXMLLoader.load(getClass().getResource("/fxml/Client/Dashboard.fxml"));
             Scene dashboardScene = new Scene(dashboardRoot);
             dashboardScene.getStylesheets().add(getClass().getResource("/Styles/Dashboard.css").toExternalForm());
 

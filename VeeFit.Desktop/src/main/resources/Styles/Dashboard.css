@@ -17,3 +17,14 @@
 .chart-pie.data1.chart-series-pie {
     -fx-pie-color: #51CF66;
 }
+
+/* Begrüßung User oben links */
+.user_name {
+    -fx-font-size: 2.6em;
+}
+
+/* Datum oben rechts */
+.date {
+    -fx-text-fill: #AAAAAA;
+    -fx-font-size: 1.1em;
+}
