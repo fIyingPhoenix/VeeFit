@@ -7,7 +7,7 @@
 
 
 <AnchorPane prefHeight="750.0" prefWidth="850.0" stylesheets="@../../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.veefit.veefitdesktop.Controllers.Client.DashboardController">
-    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="Hallo, Kamil" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
-    <Label text="Label" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0" />
+    <Text fx:id="welcome_text" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="Hallo, Kamil" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
+    <Label fx:id="dateLabel" styleClass="date" text="Heute, 29.04.2025" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0" />
     <PieChart fx:id="kalorienChart" layoutX="14.0" layoutY="64.0" prefHeight="400.0" styleClass="kalorienChart" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="64.0" />
 </AnchorPane>
