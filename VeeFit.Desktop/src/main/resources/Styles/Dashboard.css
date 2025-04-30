@@ -1,3 +1,7 @@
+.dashboard_container_menu {
+    -fx-background-color: #98F5FF;
+}
+
 .kalorienChart .chart-title {
     -fx-font-size: 20px;
     -fx-font-weight: bold;
