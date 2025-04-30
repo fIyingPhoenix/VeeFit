@@ -3,11 +3,29 @@
 <?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="750.0" prefWidth="850.0" stylesheets="@../../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.veefit.veefitdesktop.Controllers.Client.DashboardController">
-    <Text fx:id="welcome_text" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="Hallo, Kamil" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
-    <Label fx:id="dateLabel" styleClass="date" text="Heute, 29.04.2025" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0" />
-    <PieChart fx:id="kalorienChart" layoutX="14.0" layoutY="64.0" prefHeight="400.0" styleClass="kalorienChart" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="64.0" />
-</AnchorPane>
+<?import javafx.geometry.Insets?>
+<BorderPane prefHeight="750.0" prefWidth="1000.0" stylesheets="@../../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.veefit.veefitdesktop.Controllers.Client.DashboardController">
+   <top>
+       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+           <Text fx:id="welcome_text" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="Hallo, Kamil" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
+           <Label fx:id="dateLabel" styleClass="date" text="Heute, 29.04.2025" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="30.0" />
+       </AnchorPane>
+   </top>
+   <left>
+       <VBox fx:id="menubox" spacing="10" >
+           <padding>
+               <Insets top="20" right="20" bottom="100" left="20" />
+           </padding>
+            <fx:include source="ClientMenu.fxml" />
+       </VBox>
+   </left>
+   <center>
+       <AnchorPane prefHeight="124.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+           <PieChart fx:id="kalorienChart" prefHeight="400.0" prefWidth="400.0" styleClass="kalorienChart" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="64.0" />
+       </AnchorPane>
+   </center>
+</BorderPane>

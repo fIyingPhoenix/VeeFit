@@ -2,6 +2,7 @@
 .dashboard_container_main {
     -fx-background-color: #EEEEEE;
     -fx-alignment: CENTER;
+    -padding-left: 20px;
 }
 /* Linke Seitenleiste */
 
@@ -29,6 +30,7 @@
 .menu_container {
     -fx-padding: 10 10 10 10;
     -fx-spacing: 20;
+    -padding-left: 20px;
     -fx-alignment: CENTER;
 }
 

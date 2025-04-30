@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.Region;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.collections.FXCollections;
@@ -24,10 +25,12 @@ import java.time.format.DateTimeFormatter;
 
 public class DashboardController {
 
+    @FXML
     public PieChart kalorienChart;
     @FXML
     public Label dateLabel;
     public Text welcome_text;
+    public VBox menubox;
 
     public void initialize() {
 
