@@ -1,5 +1,7 @@
 package app.veefit.veefitdesktop.Controllers;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +17,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Region;
+import javafx.util.Duration;
 
 public class LoginController {
     public AnchorPane loginPane;
@@ -35,9 +38,34 @@ public class LoginController {
     public Button login_button;
     public TextField passwort_textfield;
     public Button registrieren_button;
+    public Label sloganLabel;
 
     @FXML
-    private void handleLogin(ActionEvent event) throws IOException {
+    public void initialize() {
+        animateText();
+    }
+
+    public void animateText() {
+        final StringBuilder displayedText = new StringBuilder();
+        String text = sloganLabel.getText();
+
+        Timeline timeline = new Timeline();
+
+        sloganLabel.setText("");
+
+        for (int i= 0; i < text.length(); i++) {
+            final int index = i;
+            KeyFrame frame = new KeyFrame(Duration.millis(30*(i + 1)), e -> {
+                displayedText.append(text.charAt(index));
+                sloganLabel.setText(displayedText.toString());
+            });
+            timeline.getKeyFrames().add(frame);
+        }
+        timeline.setCycleCount(1);
+        timeline.play();
+    }
+
+    public void handleLogin(ActionEvent event) throws IOException {
 
         String benutzername = benutzername_textfield.getText();
         String passwort = passwort_textfield.getText();
