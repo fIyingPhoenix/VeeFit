@@ -34,6 +34,7 @@ public class LoginController {
     public Button hilfe_button;
     public Button login_button;
     public TextField passwort_textfield;
+    public Button registrieren_button;
 
     @FXML
     private void handleLogin(ActionEvent event) throws IOException {
