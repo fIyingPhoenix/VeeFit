@@ -15,7 +15,7 @@
 <AnchorPane fx:id="loginPane" prefHeight="449.0" prefWidth="1000.0" styleClass="login_container_main" stylesheets="@../Styles/Login.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.veefit.veefitdesktop.Controllers.LoginController">
    <VBox layoutY="14.0" prefHeight="40.0" prefWidth="1029.0" styleClass="login_container_menu" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="1000.0">
-         <ImageView fx:id="veefit_image" fitHeight="65.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fx:id="veefit_image" fitHeight="65.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../Images/logo.png" />
          </ImageView>
          <Region fx:id="space" prefHeight="65.0" prefWidth="125.0" HBox.hgrow="ALWAYS" />

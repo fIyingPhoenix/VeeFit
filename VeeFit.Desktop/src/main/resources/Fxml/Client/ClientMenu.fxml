@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -10,12 +11,18 @@
 <?import javafx.scene.shape.Line?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<VBox fx:id="side_menu" maxWidth="171.0" minWidth="171.0" prefHeight="760.0" prefWidth="171.0" stylesheets="@../../Styles/ClientMenu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.veefit.veefitdesktop.Controllers.Client.ClientController">
+<VBox fx:id="side_menu" alignment="TOP_CENTER" maxWidth="198.0" minWidth="171.0" prefWidth="150.0" spacing="10.0" styleClass="dashboard_container_main" stylesheets="@../../Styles/ClientMenu.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.veefit.veefitdesktop.Controllers.Client.ClientController">
    <AnchorPane prefHeight="600.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
-      <VBox layoutX="25.0" layoutY="-7.0" prefHeight="50.0" prefWidth="100.0" styleClass="title_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <ImageView fitHeight="83.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../../Images/Logo.JPG" />
+      <VBox layoutX="25.0" layoutY="-7.0" prefHeight="50.0" prefWidth="100.0" spacing="10.0" styleClass="title_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <ImageView fitHeight="65.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../Images/logo.png" />
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
          </ImageView>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
       </VBox>
       <VBox prefHeight="200.0" prefWidth="100.0" styleClass="menu_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <Button fx:id="startseite_button" mnemonicParsing="false" styleClass="title_container" text="Startseite">
@@ -46,13 +53,16 @@
          </Button>
       </VBox>
    </AnchorPane>
-   <VBox prefHeight="187.0" prefWidth="190.0" styleClass="report_container">
+   <VBox prefHeight="268.0" prefWidth="198.0" styleClass="report_container">
       <TextField alignment="CENTER" text="Problem melden ?" />
-      <Label text="Benutzen Sie diesen Bereich um ein Pronlem zu melden" />
-      <Button fx:id="support_button" mnemonicParsing="false" styleClass="title_container" text="Support">
+      <Label text="Benutzen Sie diesen Bereich um ein Problem zu melden" />
+      <Button fx:id="support_button" mnemonicParsing="false" prefWidth="82.0" styleClass="title_container" text="Support">
          <graphic>
             <FontIcon iconColor="WHITE" iconLiteral="fas-comment" />
          </graphic>
       </Button>
    </VBox>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
 </VBox>
