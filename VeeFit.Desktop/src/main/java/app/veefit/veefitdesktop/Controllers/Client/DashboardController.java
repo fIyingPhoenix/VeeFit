@@ -26,11 +26,8 @@ import java.time.format.DateTimeFormatter;
 public class DashboardController {
 
     @FXML
-    public PieChart kalorienChart;
-    @FXML
     public Label dateLabel;
-    public Text welcome_text;
-    public VBox menubox;
+    public PieChart caloriesChart;
 
     public void initialize() {
 
@@ -42,7 +39,7 @@ public class DashboardController {
                 new PieChart.Data("Gegessen", 1200),
                 new PieChart.Data("Übrig", 800)
         );
-        kalorienChart.setData(daten);
+        caloriesChart.setData(daten);
 
     }
 }

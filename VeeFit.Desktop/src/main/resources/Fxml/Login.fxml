@@ -21,62 +21,62 @@
          <Region fx:id="space" prefHeight="65.0" prefWidth="125.0" HBox.hgrow="ALWAYS" />
          <Label fx:id="sloganLabel" prefHeight="49.0" prefWidth="480.0" styleClass="login_slogan" text="VeeFit – dein smarter Begleiter für Ernährung &amp; Training" />
          <Region fx:id="space2" prefHeight="65.0" prefWidth="125.0" HBox.hgrow="ALWAYS" />
-         <Button fx:id="suche_button" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" styleClass="login_menu_bar_buttons">
+         <Button fx:id="search_button" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" styleClass="login_menu_bar_buttons">
             <font>
                <Font size="20.0" />
             </font>
             <graphic>
-               <FontIcon iconLiteral="fas-search" />
+               <FontIcon fx:id="search_icon" iconLiteral="fas-search" />
             </graphic>
          </Button>
-         <Button fx:id="einstellungen_button" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" styleClass="login_menu_bar_buttons">
+         <Button fx:id="settings_button" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" styleClass="login_menu_bar_buttons">
             <font>
                <Font size="20.0" />
             </font>
             <graphic>
-               <FontIcon iconLiteral="fas-cog" />
+               <FontIcon fx:id="settings_icon" iconLiteral="fas-cog" />
             </graphic>
          </Button>
-         <Button fx:id="profil_button" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" styleClass="login_menu_bar_buttons">
+         <Button fx:id="homepage_button" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" styleClass="login_menu_bar_buttons">
             <font>
                <Font size="20.0" />
             </font>
             <graphic>
-               <FontIcon iconLiteral="fas-home" />
+               <FontIcon fx:id="homepage_icon" iconLiteral="fas-home" />
             </graphic>
          </Button>
       </HBox>
    </VBox>
    <VBox layoutX="50.0" layoutY="75.0" prefHeight="300.0" prefWidth="900.0" styleClass="login_container_form">
       <children>
-         <Label id="login_bereich_textfield" fx:id="loginbereich_label" text="LOGIN - BEREICH">
+         <Label id="login_bereich_textfield" fx:id="loginarea_label" text="LOGIN - BEREICH">
             <font>
                <Font name="System Italic" size="12.0" />
             </font>
          </Label>
-         <Label fx:id="benutzername_label" text="BENUTZERNAME">
+         <Label fx:id="username_label" text="BENUTZERNAME">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
          </Label>
-         <TextField fx:id="benutzername_textfield" styleClass="login_input_field" />
+         <TextField fx:id="username_textfield" styleClass="login_input_field" />
          <Label fx:id="password_label" text="PASSWORT">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
          </Label>
-         <TextField fx:id="passwort_textfield" styleClass="login_input_field" />
+         <TextField fx:id="password_textfield" styleClass="login_input_field" />
          <Button fx:id="login_button" mnemonicParsing="false" onAction="#handleLogin" prefWidth="1000.0" styleClass="login_button" text="LOGIN" textFill="WHITE">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
          </Button>
-         <Button fx:id="hilfe_button" mnemonicParsing="false" styleClass="login_hilfebutton" text="PASSWORT VERGESSEN ?">
+         <Button fx:id="password_button" mnemonicParsing="false" styleClass="login_hilfebutton" text="PASSWORT VERGESSEN ?">
             <font>
                <Font name="System Bold" size="12.0" />
             </font>
          </Button>
-         <Button fx:id="registrieren_button" mnemonicParsing="false" styleClass="login_registrieren_button" text="REGISTRIEREN" />
+         <Button fx:id="registration_button" mnemonicParsing="false" styleClass="login_registrieren_button" text="REGISTRIEREN" />
       </children>
    </VBox>
 </AnchorPane>

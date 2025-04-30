@@ -18,27 +18,28 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Region;
 import javafx.util.Duration;
+import org.kordamp.ikonli.javafx.FontIcon;
 
 public class LoginController {
     public AnchorPane loginPane;
-    public Button start_button;
     public ImageView veefit_image;
     public Region space;
-    public Button tagebuch_button;
-    public Button aktivitaet_button;
     public Region space2;
-    public Button suche_button;
-    public Button einstellungen_button;
-    public Button profil_button;
-    public Label loginbereich_label;
-    public Label benutzername_label;
-    public TextField benutzername_textfield;
+    public Button search_button;
+    public Button settings_button;
+    public Button homepage_button;
+    public Label loginarea_label;
+    public Label username_label;
+    public TextField username_textfield;
     public Label password_label;
-    public Button hilfe_button;
+    public Button password_button;
     public Button login_button;
-    public TextField passwort_textfield;
-    public Button registrieren_button;
+    public TextField password_textfield;
+    public Button registration_button;
     public Label sloganLabel;
+    public FontIcon settings_icon;
+    public FontIcon homepage_icon;
+    public FontIcon search_icon;
 
     @FXML
     public void initialize() {
@@ -67,10 +68,10 @@ public class LoginController {
 
     public void handleLogin(ActionEvent event) throws IOException {
 
-        String benutzername = benutzername_textfield.getText();
-        String passwort = passwort_textfield.getText();
+        String username = username_textfield.getText();
+        String password = password_textfield.getText();
 
-        if (benutzername.equals("admin") && passwort.equals("1234")) {
+        if (username.equals("admin") && password.equals("1234")) {
 
             Parent dashboardRoot = FXMLLoader.load(getClass().getResource("/fxml/Client/Dashboard.fxml"));
             Scene dashboardScene = new Scene(dashboardRoot);

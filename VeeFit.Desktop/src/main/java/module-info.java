@@ -4,6 +4,7 @@ module app.veefit.veefitdesktop {
     requires de.jensd.fx.glyphs.fontawesome;
     requires java.sql;
     requires org.xerial.sqlitejdbc;
+    requires org.kordamp.ikonli.javafx;
 
     opens app.veefit.veefitdesktop to javafx.fxml;
     opens app.veefit.veefitdesktop.Controllers to javafx.fxml;

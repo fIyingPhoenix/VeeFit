@@ -8,9 +8,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ClientController implements Initializable {
-    public Button startseite_button;
-    public Button tagebuch_button;
-    public Button plaene_button;
+    public Button homepage_button;
+    public Button diary_button;
+    public Button plans_button;
     public Button profil_button;
     public Button logout_button;
     public Button support_button;
