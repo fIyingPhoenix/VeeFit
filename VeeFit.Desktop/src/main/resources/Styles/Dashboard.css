@@ -2,6 +2,9 @@
     -fx-background-color: #98F5FF;
 }
 
+.kalorienChart {
+    -fx-pie-visible: true;
+}
 .kalorienChart .chart-title {
     -fx-font-size: 20px;
     -fx-font-weight: bold;

@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane prefHeight="780.0" prefWidth="1000.0" stylesheets="@../../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.veefit.veefitdesktop.Controllers.Client.DashboardController">
@@ -27,7 +28,30 @@
    </top>
    <center>
        <AnchorPane prefHeight="623.0" prefWidth="789.0" BorderPane.alignment="CENTER">
-           <PieChart fx:id="caloriesChart" prefHeight="400.0" prefWidth="400.0" styleClass="kalorienChart" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="64.0" />
+           <PieChart fx:id="caloriesChart" layoutX="14.0" layoutY="320.0" prefHeight="386.0" prefWidth="801.0" styleClass="kalorienChart" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+          <HBox alignment="CENTER" prefHeight="310.0" prefWidth="830.0" spacing="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                  <PieChart fx:id="carb_chart" styleClass="kalorienChart" VBox.vgrow="NEVER" />
+                  <Label fx:id="carbLabel" text="Kohlenhydrate" textAlignment="CENTER">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font></Label>
+              </VBox>
+              <VBox alignment="CENTER" prefHeight="180.0" prefWidth="150.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                  <PieChart fx:id="protein_chart" styleClass="kalorienChart" VBox.vgrow="NEVER" />
+                  <Label fx:id="proteinLabel" prefHeight="25" text="Proteine">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font></Label>
+              </VBox>
+              <VBox alignment="CENTER" prefHeight="180.0" prefWidth="150.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                  <PieChart fx:id="fat_chart" styleClass="kalorienChart" VBox.vgrow="NEVER" />
+                  <Label fx:id="fatLabel" prefHeight="25" text="Fette">
+                  <font>
+                     <Font name="System Bold" size="14.0" />
+                  </font></Label>
+              </VBox>
+          </HBox>
        </AnchorPane>
    </center>
    <left>
