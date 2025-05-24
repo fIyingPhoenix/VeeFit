@@ -41,6 +41,7 @@ out/
 *.iws
 *.ipr
 *.iml
+.venv
 
 # Eclipse
 .project
